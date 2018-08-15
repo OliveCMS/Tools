@@ -14,7 +14,7 @@ $ composer require OliveCMS/Tools
 
 ``` php
 require_once 'vendor/autoload.php';
-use OliveCMS\Tools\Common as Tools;
+use Olive\Tools;
 
 var_dump(Tools::getDirsList('/path/to/dir'));
 ```

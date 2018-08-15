@@ -28,7 +28,7 @@ If you do not use Composer, you can grab the code from GitHub, and use any PSR-0
 ``` php
 // load autoload
 require_once 'vendor/autoload.php';
-use OliveCMS\Tools\Common as Tools;
+use Olive\Tools;
 ```
 
 ## Items

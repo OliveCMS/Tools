@@ -1,7 +1,7 @@
 <?php
-namespace Olive\Tools;
+namespace Olive;
 
-class Common
+class Tools
 {
     public static function file($file, $content = '', $p = 'w')
     {
