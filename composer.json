@@ -1,5 +1,5 @@
 {
-  "name": "OliveCMS/Tools",
+  "name": "olive-cms/tools",
   "description": "Most common tools for OliveCMS Project",
   "type": "library",
   "keywords": ["tools"],
