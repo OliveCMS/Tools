@@ -5,9 +5,17 @@ class Tools
 {
     public static function file($file, $content = '', $p = 'w')
     {
+        if (($p == 'r' or $p == 'r+') and ! file_exists($file)) {
+            return false;
+        }
+        if (($p == 'x' or $p == 'x+') and file_exists($file)) {
+            return false;
+        }
         $file = fopen($file, $p);
         fwrite($file, $content);
         fclose($file);
+
+        return true;
     }
 
     public static function getDirList($dir, $sort = false)

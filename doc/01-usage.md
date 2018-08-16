@@ -37,8 +37,11 @@ use Olive\Tools;
 ### File
 
 ``` php
-// last argument type open file -> default: 'w'
-// @return void
+/**
+ * file tools
+ * last argument type stream file -> default: 'w'
+ * @return bool
+ */
 
 Tools::file('/path/to/file', 'content');
 Tools::file('/path/to/file', 'content', 'a');
