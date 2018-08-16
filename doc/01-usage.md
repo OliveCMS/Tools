@@ -115,6 +115,66 @@ Merge arrays with compare
 ``` php
 // @return array | object
 
-$array = Tools::getJsonFile('/path/to/file.json');
-$object = Tools::getJsonFile('/path/to/file.json', false);
+$a=[
+  'arr1'=>[
+    'arr11'=>[1,2,3,4,5,6],
+    'arr12'=>[7,8,9,10,11]
+  ],
+  'str1'=>'tools'
+];
+$b=[
+  'arr1'=>[
+    'arr11'=>[11,22,33],
+    'arr12'=>[
+      'op' => [111,222,333],
+      'op2' => 'lurem'
+    ]
+  ],
+  'str2'=>'merge'
+];
+$merged=Tools::arrayMerge($a, $b));
+```
+
+output:
+
+```
+Array
+(
+    [arr1] => Array
+        (
+            [arr11] => Array
+                (
+                    [0] => 1
+                    [1] => 2
+                    [2] => 3
+                    [3] => 4
+                    [4] => 5
+                    [5] => 6
+                    [6] => 11
+                    [7] => 22
+                    [8] => 33
+                )
+
+            [arr12] => Array
+                (
+                    [op] => Array
+                        (
+                            [0] => 111
+                            [1] => 222
+                            [2] => 333
+                        )
+
+                    [op2] => lurem
+                    [0] => 7
+                    [1] => 8
+                    [2] => 9
+                    [3] => 10
+                    [4] => 11
+                )
+
+        )
+
+    [str2] => merge
+    [str1] => tools
+)
 ```
