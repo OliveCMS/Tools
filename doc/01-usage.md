@@ -1,4 +1,4 @@
-# Using Monolog
+# Using Tools
 
 - [Installation](#installation)
   1. [Basic Usage](#basic-usage)
@@ -14,10 +14,10 @@
 
 ## Installation
 
-OliveCMS/Tools is available on Packagist ([OliveCMS/Tools](http://packagist.org/packages/OliveCMS/Tools)) and as such installable via [Composer](http://getcomposer.org/).
+olive-cms/tools is available on Packagist ([olive-cms/tools](http://packagist.org/packages/olive-cms/tools)) and as such installable via [Composer](http://getcomposer.org/).
 
 ```bash
-composer require OliveCMS/Tools
+composer require olive-cms/tools
 ```
 
 If you do not use Composer, you can grab the code from GitHub, and use any PSR-0 compatible autoloader (e.g. the [Symfony2 ClassLoader component](https://github.com/symfony/ClassLoader)) to load Monolog classes.

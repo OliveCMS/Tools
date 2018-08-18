@@ -7,7 +7,7 @@ Most common tools for [OliveCMS](https://github.com/OliveCMS/) Project.
 Install the latest version with
 
 ```
-$ composer require OliveCMS/Tools
+$ composer require olive-cms/tools
 ```
 
 ## Basic Usage
@@ -29,4 +29,4 @@ var_dump(Tools::getDirsList('/path/to/dir'));
 
 ## License
 
-OliveCMS/Tools is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+olive-cms/tools is licensed under the [MIT license](http://opensource.org/licenses/MIT).
