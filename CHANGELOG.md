@@ -1,5 +1,9 @@
 # Changelog
 
+# v1.0.2
+
+* fix arraymerge problem
+
 # v1.0.1
 
 * detect file method errors
