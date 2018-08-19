@@ -105,21 +105,35 @@ class Tools
         return $return;
     }
 
-    public static function arrayMerge($default, $option)
+    public static function arrayMerge($a, $b)
     {
-        foreach ($default as $key => $value) {
-            if (isset($option[$key]) == false) {
-                $option[$key] = $value;
-            } elseif (is_array($value) and is_array($option[$key])) {
+        if (! is_array($a)) {
+            if ($a != '') {
+                $a = [$a];
+            } else {
+                $a = [];
+            }
+        }
+        if (! is_array($b)) {
+            if ($b != '') {
+                $b = [$b];
+            } else {
+                $b = [];
+            }
+        }
+        foreach ($a as $key => $value) {
+            if (isset($b[$key]) == false) {
+                $b[$key] = $value;
+            } elseif (is_array($value) and is_array($b[$key])) {
                 // https://stackoverflow.com/questions/173400/how-to-check-if-php-array-is-associative-or-sequential
-                if (array_values($value) == $value and array_values($option[$key]) == $option[$key]) {
-                    $option[$key] = array_values(array_unique(array_merge($value, $option[$key])));
+                if (array_values($value) == $value and array_values($b[$key]) == $b[$key]) {
+                    $b[$key] = array_values(array_unique(array_merge($value, $b[$key])));
                 } else {
-                    $option[$key] = self::arrayMerge($value, $option[$key]);
+                    $b[$key] = self::arrayMerge($value, $b[$key]);
                 }
             }
         }
 
-        return $option;
+        return $b;
     }
 }
