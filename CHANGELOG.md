@@ -1,5 +1,9 @@
 # Changelog
 
+# v1.1.0
+
+* add run callable methods
+
 # v1.0.2
 
 * fix arraymerge problem

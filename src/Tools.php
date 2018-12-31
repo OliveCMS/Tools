@@ -136,4 +136,23 @@ class Tools
 
         return $b;
     }
+
+    public function runCaller($call, $args = [])
+    {
+        if (is_string($call)) {
+            if (function_exists($call)) {
+                return call_user_func_array($call, $args);
+            } else {
+                return $call;
+            }
+        } elseif (is_array($call) and count($call) == 2) {
+            $class = $call[0];
+            $method = $call[1];
+            if (class_exists(get_class($class))) {
+                if (method_exists($class, $method)) {
+                    return call_user_func_array([$class, $method], $args);
+                }
+            }
+        }
+    }
 }

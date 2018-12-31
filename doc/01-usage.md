@@ -11,6 +11,7 @@
   6. [Json Encode](#json-encode)
   7. [Get Json File](#get-json-file)
   8. [Array Merge](#array-merge)
+  8. [Run Callable Methods](#run-callable-methods)
 
 ## Installation
 
@@ -177,4 +178,23 @@ Array
     [str2] => merge
     [str1] => tools
 )
+```
+
+### Run Callable Methods
+
+Run Callable Methods (functions, oops, string)
+
+``` php
+// return mixed
+
+class Hello
+{
+    public function say($name)
+    {
+        return 'hello ' . $name;
+    }
+}
+
+$testob = new Hello;
+echo Tools::runCaller([$testob, 'say'], ['world']); // Hello world
 ```
