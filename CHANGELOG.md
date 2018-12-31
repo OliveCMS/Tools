@@ -1,5 +1,9 @@
 # Changelog
 
+# v1.1.1
+
+* fix anonymous function in runCaller
+
 # v1.1.0
 
 * add run callable methods

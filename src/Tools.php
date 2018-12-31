@@ -153,6 +153,8 @@ class Tools
                     return call_user_func_array([$class, $method], $args);
                 }
             }
+        } elseif (is_callable($call)) {
+            return call_user_func_array($call, $args);
         }
     }
 }
